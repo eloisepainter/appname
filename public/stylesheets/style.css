@@ -1,9 +1,9 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: #07f56a;
-  color: teal;
+  background: #fff;
+  color: rgb(2, 0, 0);
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }

@@ -1,0 +1,11 @@
+<%- include('partials/header'); %> 
+ <div class="h-100 d-flex justify-content-center align-items-center bg-dark">
+        <form class="p-5 rounded-lg bg-light" action="/register" method="post">
+                <input class="form-control mb-2" type="email" name="email" placeholder="Email">
+                <input class="form-control mb-2" type="password" name="password" placeholder="Password">
+                <input class="form-control mb-2" type="password" name="passwordConfirm" placeholder="Confirm password">
+
+                <button type="submit" class="btn bg-light bg-white border">register</button>
+        </form>
+    </div>
+<%- include('partials/footer'); %>
