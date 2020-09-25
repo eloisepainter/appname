@@ -6,6 +6,11 @@
                 <input class="form-control mb-2" type="password" name="passwordConfirm" placeholder="Confirm password">
 
                 <button type="submit" class="btn bg-light bg-white border">register</button>
+                <% if (locals.errors && locals.errors.register) { %>
+                    <% locals.errors.register.forEach(function(error) { %>
+                        <p class="alert alert-primary" role="alert"><%= error %></p>
+                    <% }) %>
+                <% } %>
         </form>
     </div>
 <%- include('partials/footer'); %>

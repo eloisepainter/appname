@@ -1,0 +1,25 @@
+<%- include('partials/header'); %> 
+ <div class="h-100 d-flex justify-content-center align-items-center bg-dark">
+        <form class="p-5 rounded-lg bg-light" action="/account" method="post" enctype="multipart/form-data">
+                <input class="form-control mb-2" type="text" name="displayName" placeholder="Display Name" value="<%= locals.user.displayName %>">
+                <input class="form-control mb-2" type="email" name="email" placeholder="Email" value="<%= locals.user.email %>">
+                <input class="form-control mb-2" type="file" name="avatar" >
+                <button type="submit" class="btn bg-light bg-white border">update</button> 
+                <% if (locals.errors && locals.errors.login) { %>
+                    <% locals.errors.login.forEach(function(error) { %>
+                        <p class="alert alert-primary" role="alert"><%= error %></p>
+                    <% }) %>
+                <% } %>
+                <%- include('partials/footer'); %>
+
+                <% if (locals.user.photoURL) {%>
+                <p class="avatar">
+                    <img src="<%= locals.user.photoURL %>"alt=""">
+                    <% } %>
+                </p>}
+                <p><img src="<%= locals.user.photoURL %>" alt="" style="width:33%"></p>
+                <p><a href="/channels">Channels</a></p>
+                <p><a href="/logout">Logout</a></p>
+        </form>
+    </div>
+<%- include('partials/footer'); %>
